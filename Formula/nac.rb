@@ -5,21 +5,21 @@
 class Nac < Formula
   desc "n8n As Code - Manage n8n workflows and credentials as version-controlled files."
   homepage "https://github.com/crymfox/nac"
-  version "0.1.1"
+  version "0.1.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Crymfox/nac/releases/download/v0.1.1/nac_Darwin_x86_64.tar.gz"
-      sha256 "6077edaba629267fbe0e3b96dfefa882a36f2fc53e56627324dfc10bfae5ed63"
+      url "https://github.com/Crymfox/nac/releases/download/v0.1.2/nac_Darwin_x86_64.tar.gz"
+      sha256 "b4ca9f26f7ca5738e4d834969df01bced5ed902c72d3792f73e7697dadc0ca51"
 
       define_method(:install) do
         bin.install "nac"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/Crymfox/nac/releases/download/v0.1.1/nac_Darwin_arm64.tar.gz"
-      sha256 "eb1a5fb2f93c3be79b6f6c0b7f2e59a1a26bc2531ef963a388ebbd47e92a20e9"
+      url "https://github.com/Crymfox/nac/releases/download/v0.1.2/nac_Darwin_arm64.tar.gz"
+      sha256 "262db91313b131f0852baf26a7fe78a3c72c2acdc1de6bacfe628423cceaa23a"
 
       define_method(:install) do
         bin.install "nac"
@@ -29,15 +29,15 @@ class Nac < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Crymfox/nac/releases/download/v0.1.1/nac_Linux_x86_64.tar.gz"
-      sha256 "2627c57bc39403c4f971e38d69db5c0266c808a7efd87a5228e0076f261d1588"
+      url "https://github.com/Crymfox/nac/releases/download/v0.1.2/nac_Linux_x86_64.tar.gz"
+      sha256 "77e6adb7c06903ea5c2955771dbaf460d867fcc1e15e061d1997f6167edbc336"
       define_method(:install) do
         bin.install "nac"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Crymfox/nac/releases/download/v0.1.1/nac_Linux_arm64.tar.gz"
-      sha256 "e03423ec22c4b764118a60b0ba76ebcabdda480bf01d7d99540d1a77555c49c9"
+      url "https://github.com/Crymfox/nac/releases/download/v0.1.2/nac_Linux_arm64.tar.gz"
+      sha256 "9008e88c7a74d88d896ffd366fe66068473076cea9cc31903b2267d47c36a42f"
       define_method(:install) do
         bin.install "nac"
       end
